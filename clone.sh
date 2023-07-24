@@ -1,4 +1,4 @@
-project="Business-Intelligence"
+project=$(yq e '.devops.project' ./parameters.yaml)
 repo_list=()
 while IFS= read -r line
 do
@@ -15,9 +15,6 @@ do
     cd ..
     rm -r -f $repo
     cd ..
-    repo_id=$(az repos show -r $repo --query id -p $project | tr -d '"')
-    echo "Deleting $repo with id $repo_id"
-    # az repos delete --id $repo_id -p $project
 done    
 
 echo "Archive complete"
