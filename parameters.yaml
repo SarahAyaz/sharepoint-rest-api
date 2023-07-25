@@ -10,6 +10,7 @@ devops:
 credentials:
   username: "user@organization.de"
   password: "yoursecretpassword"
+  pat: "yourdevopspat"
 
 archive_file_config:
   list:
