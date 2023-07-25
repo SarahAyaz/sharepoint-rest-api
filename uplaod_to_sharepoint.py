@@ -4,14 +4,13 @@ import toml
 import yaml
 from yaml.loader import SafeLoader
 
-# from tests import test_site_url, test_username, test_password
 with open("./parameters.yaml", "r") as stream:
     config = yaml.load(stream, Loader=SafeLoader)
+
 ctx = ClientContext(config["sharepoint"]["url"]).with_user_credentials(config["credentials"]["username"], config["credentials"]["password"])
 
 root_folder = ctx.web.default_document_library().root_folder
-taget_folder = "Archived"
-
+taget_folder = config["sharepoint"]["target_folder"]
 
 def enum_folder(parent_folder, action):
     parent_folder.expand(["Folders"]).get().execute_query()
