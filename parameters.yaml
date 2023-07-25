@@ -1,0 +1,21 @@
+sharepoint:
+  url: "https://organization.sharepoint.com/sites/"
+  target_folder: "target"
+
+devops:
+  project: "DevOps-Project"
+
+# TODO: hardcoding username and password in git is not the best practice
+# use env variables, instead
+credentials:
+  username: "user@organization.de"
+  password: "yoursecretpassword"
+
+archive_file_config:
+  list:
+    - list
+    - of
+    - repositories
+    - to
+    - be
+    - archived
