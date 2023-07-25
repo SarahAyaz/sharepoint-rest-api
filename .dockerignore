@@ -1,0 +1,7 @@
+dsccnfg/*
+dscdonl/*
+dscextr/*
+dscwh/*
+*.code-workspace
+**/venv/*
+**/archive/*
