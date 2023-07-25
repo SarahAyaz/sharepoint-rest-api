@@ -1,13 +1,17 @@
 ## Clean DevOps
-This script automate the process of archiving old repos in Azure DevOps
+This repo aids in the process of archiving old DevOps repos to Sharepoint site
 
 **Outcomes**
-- Download the repos as zip
-- Upload the zip folders to Sharepoint
+- Clone repositories and compress them
+- Upload the compressed files to Sharepoint site
 
 **Prerequisites**
-- Create a PAT with Read, Write and Manage scope for repositories
-- Login to Azure DevOps with token
-```
-az dveops login --organization "https:dev.azure.com/{MyOrganization}/"
-```
+- [Create a PAT](https://learn.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=Windows) with Read, Write and Manage scope in Azure DevOps
+- Access to Sharepoint site
+
+
+**Steps**
+- Clone the repo
+- Set ENV variables (if required)
+- Replace values in yaml configuration file
+- Execute entrypoint.sh
