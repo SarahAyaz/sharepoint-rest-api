@@ -1,5 +1,8 @@
 # TODO: resolve yq dependency on jq
 # yq commands won't execute unless jq is intalled and included in the path
+pat=$(python -m yq '.credentials.pat' ./parameters.yaml | tr -d '"')
+echo $pat | az devops login --organization 'https://dev.azure.com/lichtblick/'
+
 project=$(python -m yq '.devops.project' ./parameters.yaml | tr -d '"')
 echo "Cleanup Repositories in $project DevOps"
 repo_list=()
