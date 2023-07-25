@@ -1,6 +1,5 @@
 from office365.sharepoint.client_context import ClientContext
 from office365.runtime.client_request_exception import ClientRequestException
-import toml
 import yaml
 from yaml.loader import SafeLoader
 
